@@ -1,0 +1,51 @@
+#default-button {
+  background: #008FEF;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1em;
+  padding: 1em;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  #default-button {
+    margin-bottom: 10px;
+  }
+}
+.todolist-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+.todolist-container .task-filters {
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  float: left;
+  margin: 0 auto;
+  font-size: 30px;
+}
+.todolist-container .task-filters li {
+  float: left;
+  padding: 5px 10px;
+}
+.todolist-container .details-container {
+  width: 100%;
+  float: left;
+}
+.todolist-container ::ng-deep .task-form input {
+  height: 50px;
+  font-size: 35px;
+}
+@media only screen and (max-width: 768px) {
+  .todolist-container ::ng-deep .task-form input {
+    font-size: 15px;
+    height: 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .todolist-container ::ng-deep .task-form button {
+    padding: 12px;
+  }
+}

@@ -1,0 +1,31 @@
+<!-- <md-card class="article-body"> -->
+  <figure class="task-container" [class.task-completed]="task.completed">
+    <button class="toggle-btn" (click)="toggleStatus(task)">
+        <i class="fa fa-check-circle-o" aria-hidden="true" *ngIf="task.completed; else notCompleted"></i>
+        <ng-template #notCompleted >
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+        </ng-template>
+    </button>
+
+    <div class="task-value" *ngIf="!editing; else editItem">
+        {{task.value}}
+    </div>
+    <ng-template #editItem>
+        <form class="task-form" *ngIf="editing" (ngSubmit)="saveTitle()" novalidate>
+            <input [(ngModel)]="taskText" (blur)="stopEditing()"
+                (keyup.escape)="stopEditing()" autocomplete="off"
+                autoFocus class="task-item__input"
+                name="title" type="text">
+        </form>
+    </ng-template>
+
+    <button class="delete-btn" (click)="removeTask(task)">
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+      </button>
+
+    <button class="edit-btn" (click)="editTask()">
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+    </button>
+
+</figure>
+<!-- </md-card> -->

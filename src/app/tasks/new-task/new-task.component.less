@@ -1,0 +1,21 @@
+@import '../../../variables.less';
+@import '../../../mixins.less';
+.task-form {
+  input {
+    width: 80%;
+    float: left;
+    @media @phone {
+      width: 100%;
+    }
+  }
+  button {
+      width: 18%;
+      margin-left: 2%;
+      float: left;
+      #default-button;
+      @media @phone {
+        margin-left: 0;
+        width: 200px;
+      }
+  }
+}

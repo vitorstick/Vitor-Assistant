@@ -1,0 +1,60 @@
+@import '../../../variables.less';
+@import '../../../mixins.less';
+
+@buttons-width:4%;
+@buttons-x-width:6%;
+
+figure.task-container {
+    float: left;
+    width: 100%;
+    padding: 10px 0;
+    font-size: @f-main-size;
+    @media @tablet {
+        font-size: @f-main-sm-size;
+    }
+    .toggle-btn {
+        float: left;
+        width: @buttons-width;
+        cursor: pointer;
+    }
+    .task-value {
+        overflow: hidden;
+        float: left;
+        padding: 0 10px;
+        line-height: @f-main-size + 5px;
+        @media @tablet {
+            line-height: @f-main-sm-size;
+        }
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 88%;
+    }
+    form.task-form {
+        float: left;
+        width: 86%;
+        padding: 0 10px;
+    }
+    .delete-btn {
+        float: right;
+        width: @buttons-width;
+        cursor: pointer;
+        @media @phone {
+            width: @buttons-x-width;
+        }
+    }
+    .edit-btn {
+        float: right;
+        width: @buttons-width;
+        cursor: pointer;
+        @media @phone {
+            width: @buttons-x-width;
+        }
+    }
+}
+
+.task-completed {
+    .task-value {
+        text-decoration: line-through;
+    }
+}

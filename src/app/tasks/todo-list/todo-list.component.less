@@ -1,0 +1,44 @@
+@import '../../../variables.less';
+@import '../../../mixins.less';
+
+.todolist-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    .task-filters {
+        list-style: none;
+        text-align: center;
+        width: 100%;
+        float: left;
+        margin: 0 auto;
+        font-size: @f-main-size;
+        li {
+            float: left;
+            padding: 5px 10px;
+        }
+    }
+    .details-container {
+        width: 100%;
+        float: left;
+    }
+     ::ng-deep {
+        .task-form {
+            input {
+                height: 50px;
+                font-size: @f-main-size + 5px;
+                @media @tablet {
+                    font-size: @f-main-sm-size;
+                    height: 41px;
+
+                }
+            }
+            button {
+              @media @tablet {
+                padding: 12px;
+              }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,7 @@
+<form class="task-form" (ngSubmit)="submit()" novalidate>
+    <input [(ngModel)]="title" (keyup.escape)="clear()" autocomplete="off" autofocus class="task-form__input" name="title" placeholder="What are you procrastinating?"
+        required type="text">
+    <button (click)="submit()" [disabled]="title.length<2">
+      Submit
+    </button>
+</form>

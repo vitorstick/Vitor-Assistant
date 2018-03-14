@@ -1,0 +1,22 @@
+<div class="todolist-container">
+  <new-task (createTask)="createTask($event)"></new-task>
+
+
+
+
+  <ul class="task-filters">
+    <li><a (click)="toogleInactive('all')">View All</a></li>
+    <li><a (click)="toogleInactive('active')">Active</a></li>
+  </ul>
+
+  <div id="details-container" *ngIf="items">
+    <app-task-item [task]="item" (update)="changeStatus($event)" (remove)="removeTask($event)" 
+    *ngFor="let item of items | async | activeTask:showInactive">
+    </app-task-item>
+  </div>
+
+		<!-- <button (click)="increment()">Increment</button> -->
+    <!-- <div>Current Count: {{ counter | async }}</div> -->
+		<!-- <button (click)="decrement()">Decrement</button> -->
+		<!-- <button (click)="reset()">Reset Counter</button> -->
+</div>

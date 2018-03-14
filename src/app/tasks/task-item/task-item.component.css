@@ -1,0 +1,64 @@
+#default-button {
+  background: #008FEF;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+figure.task-container {
+  float: left;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 30px;
+}
+@media only screen and (max-width: 768px) {
+  figure.task-container {
+    font-size: 15px;
+  }
+}
+figure.task-container .toggle-btn {
+  float: left;
+  width: 4%;
+  cursor: pointer;
+}
+figure.task-container .task-value {
+  float: left;
+  padding: 0 10px;
+  line-height: 35px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 88%;
+}
+@media only screen and (max-width: 768px) {
+  figure.task-container .task-value {
+    line-height: 15px;
+  }
+}
+figure.task-container form.task-form {
+  float: left;
+  width: 86%;
+  padding: 0 10px;
+}
+figure.task-container .delete-btn {
+  float: right;
+  width: 4%;
+  cursor: pointer;
+}
+@media only screen and (max-width: 480px) {
+  figure.task-container .delete-btn {
+    width: 6%;
+  }
+}
+figure.task-container .edit-btn {
+  float: right;
+  width: 4%;
+  cursor: pointer;
+}
+@media only screen and (max-width: 480px) {
+  figure.task-container .edit-btn {
+    width: 6%;
+  }
+}
+.task-completed .task-value {
+  text-decoration: line-through;
+}

@@ -1,0 +1,22 @@
+@f-main-color: #2c2c2c;
+@fontSize: 10px;
+@f-main-size:30px;
+@f-main-sm-size:15px;
+
+
+@xs-min: 480px;
+@sm-min: 768px;
+@md-min: 992px;
+@lg-min: 1200px;
+
+@xs-max: (@sm-min - 1);
+@sm-max: (@md-min - 1);
+@md-max: (@lg-min - 1);
+
+@phone:          ~"only screen and (max-width: @{xs-min})";
+@phone-strict:   ~"only screen and (max-width: @{xs-min}) and (max-width: @{xs-max})";
+@tablet:         ~"only screen and (max-width: @{sm-min})";
+@tablet-strict:  ~"only screen and (max-width: @{sm-min}) and (max-width: @{sm-max})";
+@desktop:        ~"only screen and (max-width: @{md-min})";
+@desktop-strict: ~"only screen and (max-width: @{md-min}) and (max-width: @{md-max})";
+@large:          ~"only screen and (max-width: @{lg-min})";

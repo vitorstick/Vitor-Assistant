@@ -1,0 +1,20 @@
+<button (click)="login()" *ngIf="!(user | async)?.uid">
+  <i class="fa fa-eye" aria-hidden="true"></i>
+  Anonymous Login
+</button>
+
+<button (click)="signInWithFacebook()" *ngIf="!(user | async)?.uid">
+  <i class="fa fa-facebook" aria-hidden="true"></i>
+  Facebook
+</button>
+ <button (click)="signInWithGoogle()" *ngIf="!(user | async)?.uid">
+  <i class="fa fa-google" aria-hidden="true"></i>
+  Google
+</button> 
+<button (click)="logout()" *ngIf="(user | async)?.uid">
+  <i class="fa fa-frown-o" aria-hidden="true"></i>
+  Logout
+</button>
+<ng-template [ngIf]="(user | async)?.uid">
+  <div>Bem vindo {{displayName()}}</div>
+</ng-template>

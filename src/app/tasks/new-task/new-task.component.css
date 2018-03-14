@@ -1,0 +1,46 @@
+#default-button {
+  background: #008FEF;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1em;
+  padding: 1em;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  #default-button {
+    margin-bottom: 10px;
+  }
+}
+.task-form input {
+  width: 80%;
+  float: left;
+}
+@media only screen and (max-width: 480px) {
+  .task-form input {
+    width: 100%;
+  }
+}
+.task-form button {
+  width: 18%;
+  margin-left: 2%;
+  float: left;
+  background: #008FEF;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1em;
+  padding: 1em;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  .task-form button {
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .task-form button {
+    margin-left: 0;
+    width: 200px;
+  }
+}

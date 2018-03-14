@@ -1,0 +1,27 @@
+#default-button {
+  background: #008FEF;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  #default-button {
+    margin-bottom: 10px;
+  }
+}
+button {
+  width: 200px;
+  background: #008FEF;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  button {
+    margin-bottom: 10px;
+  }
+}

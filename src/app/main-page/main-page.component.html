@@ -1,0 +1,37 @@
+
+  <input type="text" id="message" *ngIf="(user | async)?.uid" placeholder="Leave your message" (keyup.enter)="Send($event.target.value)"
+    [(ngModel)]="msgVal" />
+  <div id="details-container">
+    <figure *ngFor="let item of items | async, let i = index ">
+      <div class="front-figure">
+        <i class="fa fa-flag" aria-hidden="true"></i>
+        <ng-template [ngIf]="currentUser">
+          <a class="delete-btn" (click)=deleteMsg(item) *ngIf="item.userId==currentUser.uid">
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </a>
+        </ng-template>
+        {{item.message}}
+      </div>
+      <div class="back-figure">
+        <span class="time-stamp">
+          {{item.timestamp | date: 'dd/MM/yyyy' || ''}}
+        </span>
+        <span class="user-name">
+          {{item.user || 'Anonymous'}}
+        </span>
+        <div class="img-container" *ngIf="item.userPhoto; else randomPhoto">
+          <img src="{{item.userPhoto}}" />
+        </div>
+        <ng-template #randomPhoto>
+          <div class="img-container">
+            <img src="https://unsplash.it/300/300/?random" />
+          </div>
+        </ng-template>
+        <ng-template [ngIf]="currentUser">
+          <a class="delete-btn" (click)=deleteMsg(item) *ngIf="item.userId==currentUser.uid">
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </a>
+        </ng-template>
+      </div>
+    </figure>
+  </div>

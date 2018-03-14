@@ -1,0 +1,6 @@
+::ng-deep nav {
+  text-align: center;
+}
+::ng-deep app-todo-list {
+  width: 100%;
+}
